@@ -3,9 +3,7 @@
 Various js tools to help with converting MathTutor to HTML.
 
 
-*index.js*
-
-Run `node index.js` to get the starting view of a tutor.
+See [CTAT HTML Component Overview](https://github.com/CMUCTAT/CTAT/wiki/Component-Overview) for details about each type of component.
 
 
 ### Examples

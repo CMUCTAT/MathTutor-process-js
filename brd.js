@@ -21,9 +21,15 @@ function extractElements(filename, callback) {
 
             let elements = processNodeMessages(xmlData.stateGraph.startNodeMessages[0].message);
 
+            processEdges(xmlData.stateGraph.edge, elements);
+
             let all_html = [];
 
             Object.keys(elements).forEach(function(key) {
+
+                // if (LOG_ELEMENTS) console.log(elements[key]);
+
+                
                 let html = getCtatHtml(elements[key], true);
                 if (html) all_html.push(html);
 
@@ -59,7 +65,14 @@ function getCtatClass(element) {
 
         case 'commTextArea':
             return "CTATTextField";
+            
+        case 'CommComboBox':
+            return "CTATComboBox";
+
+        case 'CommImage':
+            return "UNKNOWN_IMAGE"; // note that this is different than a CTATImageButton
         }
+        
     }
 
     if (element.action) {
@@ -77,6 +90,18 @@ function getCtatClass(element) {
 }
 
 
+/** 
+ * process the <edge></edge> XML.
+ */
+function processEdges(edges, elements) {
+    edges.forEach(function(edge) {
+        //console.log(edge);
+        let message = edge.actionLabel[0].message[0];
+        console.log(message);
+        
+        processMessage(message, elements);
+    });
+}
 
 
 /**
@@ -162,14 +187,32 @@ function processNotePropertySet(message, verb, elements) {
             i: message.properties[0].Input[0].value[0]
         };
 
+        // NEXT handle multiple AI combos, e.g. UpdateTextArea and SetVisible
         if (elements[SAI.s]) {
-            elements[SAI.s].input = SAI.i,
-            elements[SAI.s].action = SAI.a
+            
+            elements[SAI.s].input = SAI.i;
+            elements[SAI.s].action = SAI.a;
+
+/*            if (elements[SAI.s].AI) {
+                elements[SAI.s].AI.push({input: SAI.i, action: SAI.a});
+            } else {
+                
+                elements[SAI.s].AI = [{
+                    input: SAI.i,
+                    action: SAI.a
+                }];
+            }*/
+            
         } else {
             elements[SAI.s] = {
                 id: SAI.s,
-                input: SAI.i,
                 action: SAI.a
+                /*AI: [
+                    {
+                        input: SAI.i,
+                        action: SAI.a
+                    }
+                ]*/
             }
         }
         break;
@@ -197,8 +240,11 @@ function processNotePropertySet(message, verb, elements) {
 function processSendNoteProperty(message, verb, elements) {
     try {
         Log.verbose('VerbSend: ' + verb);
-        const Type = message.properties[0].WidgetType[0];
-        const Name = message.properties[0].DorminName[0];
+        const p = message.properties[0];
+        const Type = p.WidgetType[0];
+
+        const NameParent = p.DorminName ? p.DorminName : p.CommName; // BRDs in 6thGrade have CommName, 7thGrade have DorminName
+        const Name = NameParent[0];
         Log.verbose('Type: ' + Type + ', Name: ' + Name);
 
         if (elements[Name]) {
@@ -210,7 +256,7 @@ function processSendNoteProperty(message, verb, elements) {
             }
         }
     } catch (e) {
-        //console.log(e);
+        Log.error(e);
     }
 
 }
