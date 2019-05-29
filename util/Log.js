@@ -1,6 +1,6 @@
 const winston = require('winston')
 const Log = winston.createLogger({
-    level: 'info',
+    level: 'error',
     format: winston.format.simple(), // NEXT add comments
     transports: [
         new winston.transports.Console()

@@ -32,9 +32,10 @@ function extractElements(filename, callback) {
 
             Object.keys(elements).forEach(function(key) {
 
+                if (key === "undefined") Log.error("WHY IS THERE AN UNDEFINED KEY????");
                 // if (LOG_ELEMENTS) console.log(elements[key]);
 
-                
+                if (!elements[key].id) Log.error("UNKNOWN -- " + filename + " -- " + key);
                 let html = getCtatHtml(elements[key], true);
                 if (html) all_html.push(html);
 
@@ -50,6 +51,7 @@ function extractElements(filename, callback) {
  * Setting 'includeInput' to true will insert starting input.
  */ 
 function getCtatHtml(element, includeInput) {
+    
     element.hClass = getCtatClass(element);
 
     if (element.hClass)
@@ -332,6 +334,12 @@ function processSendNoteProperty(message, verb, elements) {
         const NameParent = p.DorminName ? p.DorminName : (p.CommName ? p.CommName : undefined); // BRDs in 6thGrade have CommName, 7thGrade have DorminName
         const Name = NameParent ? NameParent[0] : undefined;
         Log.verbose('Type: ' + Type + ', Name: ' + Name);
+
+        if (Name === undefined || Type === undefined) {
+            Log.warn("Message has undefined Name or Type: " + Name + ", " + Type);
+            Log.warn(JSON.stringify(message));
+            return;
+        }
 
         if (elements[Name]) {
             elements[Name].type = Type;
