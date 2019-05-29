@@ -1,0 +1,4 @@
+warn: 1. Enter 2.4 to show the place value of ... --> %(1)% --> 1
+warn: 2. You need to borrow to get 14 tenths. ... --> %(2)% --> 2
+warn: need now? --> %(3)% --> 3
+warn: 3. What if the number of tenths is 18? --> %(4)% --> 4

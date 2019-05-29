@@ -1,0 +1,5 @@
+warn: Using the set of shapes in the picture, ... --> %(statement)% --> statement
+warn: What percent of the shapes are %(type1)%... --> %(question1)% --> q1
+warn: What percent of the shapes are %(type2)%... --> %(question2)% --> q2
+warn: What percent of the shapes are %(type3)%... --> %(question3)% --> q3
+warn: What percent of the shapes are %(type4)%... --> %(question4)% --> q4

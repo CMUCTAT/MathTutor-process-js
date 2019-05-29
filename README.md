@@ -10,6 +10,15 @@ Run `node index.js` to get the starting view of a tutor.
 
 ### Examples
 
+#### Convert to HTML
+`cd test && node parse_brd`
+
+This will give you what the raw HTML looks like, in an unsorted array.
+
+
+
+
+#### deprecated...
 `node index -g /Users/kevindeland/git/svn/Mathtutor/6thGrade/6.01/MassProduction/Unit1.brd -t /Users/kevindeland/git/svn/Mathtutor/6thGrade/6.01/MassProduction/Unit1.txt -p Problem1 | grep warn`
 
 will output
@@ -26,3 +35,8 @@ will output
 - warn: FALSE --> %(visRow4)%
 
 You can then compare this input to a Flash interface that is connected to the BRD graph specified by -g.
+
+
+
+### Possible Next Steps
+- Put the raw output HTML as part of the tutor.

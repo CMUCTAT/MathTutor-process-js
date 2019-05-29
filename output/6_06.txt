@@ -1,0 +1,6 @@
+warn: Amy wants $3.70. --> %(1)% --> 1
+warn: 1. Use the fewest number of bills and co... --> %(2)% --> 2
+warn: 2. Amy needs extra dimes. How many bills... --> %(3)% --> 3
+warn: 17 dimes? --> %(4)% --> 4
+warn: 3. If Amy wants 27 dimes, how many other... --> %(5)% --> 5
+warn: you give her? --> %(6)% --> 6
