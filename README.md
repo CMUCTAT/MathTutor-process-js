@@ -8,11 +8,21 @@ See [CTAT HTML Component Overview](https://github.com/CMUCTAT/CTAT/wiki/Componen
 
 ### Examples
 
+#### Iterate through alllll the BRD files.
+`cd test && node parse_all_brds`
+
+This will output all the CTATComponent HTML \<div\>s for each Tutor.
+
+`cd test && node parse_all_brds | grep UNKNOWN` will show you all the CTATComponents that are still unknown.
+Open *brd.js* and find the *getCtatClass()* function to see how XML elements are mapped to HTML components.
+
+`cd test && node parse_all_brds | grep SOME_` will show you CTATComponents that have a component which has not been identified as an offical CTAT Component.
+
+
 #### Convert to HTML
 `cd test && node parse_brd`
 
 This will give you what the raw HTML looks like, in an unsorted array.
-
 
 
 
