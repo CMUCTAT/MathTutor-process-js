@@ -1,0 +1,75 @@
+<html lang="en-US">
+  <head>
+    <title>Tutor 8.05</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/beta/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="Assets/slope_intercept-styles.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctatloader.js"></script>
+  </head>
+
+  <body data-width="1440px" data-height="500px">
+    <main class="CTATTutor">
+      <h1>Tutor 8.05</h1>
+      
+      <section class="CTATProblem">
+          <h2>Problem Statement</h2>
+          <a href="./images/mathtutor_8.05_full.png" target="_blank">Click here to view sample image.</a>
+      </section>
+
+      <section class="CTATSolution">
+        <h2>Problem Solution</h2>
+        <div id="unordered-content">
+          <div id="problem_function" class="CTATTextField">Y = 6 + 20 * ( X - 2 )</div>
+		<div id="def7" class="CTATComboBox"></div>
+		<div id="def6" class="CTATComboBox">the cost of the shirts you pay for</div>
+		<div id="def5" class="CTATComboBox">the number of shirts you pay for</div>
+		<div id="def4" class="CTATComboBox">the number of shirts you decide to get</div>
+		<div id="def3" class="CTATComboBox">the price of each shirt</div>
+		<div id="def2" class="CTATComboBox">the number of free shirts if you buy more than 2</div>
+		<div id="def1" class="CTATComboBox">the cost of shipping</div>
+		<div id="exp7" class="CTATTextInput">6+20*(x-2)</div>
+		<div id="exp6" class="CTATTextInput">20*(x-2)</div>
+		<div id="exp5" class="CTATTextInput">x-2</div>
+		<div id="exp4" class="CTATTextInput">x</div>
+		<div id="exp3" class="CTATTextInput">20</div>
+		<div id="exp2" class="CTATTextInput">2</div>
+		<div id="exp1" class="CTATTextInput">6</div>
+		<div id="instructions" class="CTATTextField">Please fill in the right-hand combo boxes with correct English descriptions that matches with the mathematical expressions and the left-hand. </div>
+		<div id="problemtext" class="CTATTextField">You are interested in buying some shirts from a mail order company. The shirts cost $20 each, with a flat shipping and handling charge of $6.00. For the grand opening celebration, if you buy more than 2 shirts, the first two shirts will be free! You have not decided on how many shirts to buy, but using x and y as your variables, you can represent this situation with this equation:</div>
+		<div id="done" class="CTATDoneButton">-1</div>
+        </div>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATButtons">
+            <div class="CTATHintButton"></div>
+            <div class="CTATInstructionsButton">
+              <button class="unselectable CTAT-instructions-button">
+                <div class="CTAT-instructions-button--icon">i</div>
+                <div class="CTAT-instructions-button--text">Instructions</div>
+              </button>
+            </div>
+          </div>
+          <div class="CTATHintWindow" id="hint"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow" id="skills"></div>
+          <div class="CTATButtons">
+            <div class="CTATDoneButton"></div>
+          </div>
+        </section>
+      </section>
+
+    </main>
+  </body>
+
+</html>

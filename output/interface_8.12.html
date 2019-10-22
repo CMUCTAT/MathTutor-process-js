@@ -1,0 +1,85 @@
+<html lang="en-US">
+  <head>
+    <title>Tutor 8.12</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.ctat.cs.cmu.edu/releases/beta/CTAT.css">
+    <link rel="stylesheet" type="text/css" href="Assets/slope_intercept-styles.css">
+
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/jquery.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctat.min.js"></script>
+    <script src="https://cdn.ctat.cs.cmu.edu/releases/beta/ctatloader.js"></script>
+  </head>
+
+  <body data-width="1440px" data-height="500px">
+    <main class="CTATTutor">
+      <h1>Tutor 8.12</h1>
+      
+      <section class="CTATProblem">
+          <h2>Problem Statement</h2>
+          <a href="./images/mathtutor_8.12_full.png" target="_blank">Click here to view sample image.</a>
+      </section>
+
+      <section class="CTATSolution">
+        <h2>Problem Solution</h2>
+        <div id="unordered-content">
+          <div id="problemstatement" class="CTATTextField"><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0">Bruce Springtime has just released a new CD. In the first hour, 5000 were sold.<br><br>Part 1) If BuyMart sold 25 copies, what percentage of the first hour sales did they sell?<br><br>Part 2) If Trina bought 4 CDs to share with her friends, what percentage of the first hour sales did she buy?</FONT></P></TEXTFORMAT></div>
+		<div id="problemstatementparts" class="CTATTextField"><TEXTFORMAT LEADING="2"><P ALIGN="LEFT"><FONT FACE="Verdana" SIZE="14" COLOR="#000000" LETTERSPACING="0" KERNING="0">Part 1) If BuyMart sold out its 25 copies, what percentage of the sales did the store have in stock?<br><br>Part 2) If Trina bought 4 CDs to share with her friends, what percentage of the first hour sales did she buy?</FONT></P></TEXTFORMAT></div>
+		<div id="part2origdenomareainput" class="CTATTextField"></div>
+		<div id="part1origdenomareainput" class="CTATTextField">5000</div>
+		<div id="totalorigdenomareainput" class="CTATTextField">100</div>
+		<div id="part2operatordenompulldownmenu" class="CTATComboBox">*</div>
+		<div id="part1operatordenompulldownmenu" class="CTATComboBox">*</div>
+		<div id="totaloperatordenompulldownmenu" class="CTATComboBox">*</div>
+		<div id="part2percentareainput" class="CTATTextField">0.08</div>
+		<div id="part2percentnumareainput" class="CTATTextField">0.08</div>
+		<div id="part2denomscalefactorareainput" class="CTATTextField">50</div>
+		<div id="part2numscalefactorareainput" class="CTATTextField">50</div>
+		<div id="part2operatornumpulldownmenu" class="CTATComboBox">/</div>
+		<div id="part1percentareainput" class="CTATTextField">0.5</div>
+		<div id="part1percentnumareainput" class="CTATTextField">0.5</div>
+		<div id="part1denomscalefactorareainput" class="CTATTextField">50</div>
+		<div id="part1numscalefactorareainput" class="CTATTextField">50</div>
+		<div id="part1operatornumpulldownmenu" class="CTATComboBox">*</div>
+		<div id="totalpercentareainput" class="CTATTextField">100</div>
+		<div id="totalpercentnumareainput" class="CTATTextField">100</div>
+		<div id="totaldenomscalefactorareainput" class="CTATTextField">50</div>
+		<div id="totalnumscalefactorareainput" class="CTATTextField">50</div>
+		<div id="part1orignumareainput" class="CTATTextField">0.5</div>
+		<div id="totalorignumareainput" class="CTATTextField">5000</div>
+		<div id="part2orignumareainput" class="CTATTextField">0.08</div>
+		<div id="totaloperatornumpulldownmenu" class="CTATComboBox">*</div>
+		<div id="back_to_problem" class="CTATImageButton"></div>
+		<div id="done" class="CTATDoneButton">-1</div>
+        </div>
+      </section>
+
+      <section class="CTATTools">
+        <h2>Tools</h2>
+
+        <section class="CTATHints">
+          <h3>Hints</h3>
+          <div class="CTATButtons">
+            <div class="CTATHintButton"></div>
+            <div class="CTATInstructionsButton">
+              <button class="unselectable CTAT-instructions-button">
+                <div class="CTAT-instructions-button--icon">i</div>
+                <div class="CTAT-instructions-button--text">Instructions</div>
+              </button>
+            </div>
+          </div>
+          <div class="CTATHintWindow" id="hint"></div>
+        </section>
+
+        <section class="CTATSkills">
+          <h3>Skills</h3>
+          <div class="CTATSkillWindow" id="skills"></div>
+          <div class="CTATButtons">
+            <div class="CTATDoneButton"></div>
+          </div>
+        </section>
+      </section>
+
+    </main>
+  </body>
+
+</html>
